@@ -12,11 +12,14 @@ const Navbar = () => {
 
     let [open, setOpen] = useState(false);
     return(
+        <body className="bg-black">
+
+      
         <div>
            <div className="shadow-md w-full fixed top-0 left-0">
             <div className = "md:flex items-center justify-between px-4 bg-black py-4 text-white font-bold">
-                <div className="font-bold text-white px-7 cursor-pointer flex items-center  hover:text-gray-400 duration-200">
-                    Hi, I am Kshitiz Sinha
+                <div className="font-bold text-white px-7 text-xl cursor-pointer flex items-center  hover:text-gray-400 duration-200">
+                   Welcome
                 </div>
 
                 <div onClick={()=>setOpen(!open)} className="text-3xl absolute right-8 top-3 cursor-pointer md:hidden">
@@ -38,6 +41,7 @@ const Navbar = () => {
             </div>
            </div>
         </div>
+        </body>
     );
 }
 export default Navbar;
