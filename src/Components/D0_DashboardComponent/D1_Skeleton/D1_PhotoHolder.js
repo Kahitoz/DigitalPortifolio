@@ -1,12 +1,12 @@
-import myPhoto from "../D2_Images/ProfilePhoto.jpg"
+import myPhoto from "../D2_Images/ProfilePhoto.png"
 const D1_PhotoHolder = () =>{
     return(
         <>
-            <div className="mt-20 ">
+            <div >
                 <img
                     src={myPhoto}
                     alt="Kshitiz Sinha Profile Photo"
-                    className="rounded-full w-64 h-64 xl:w-96 lg:h-96 mt-10"
+                    className={`rounded-full border-black border-2 w-32 h-32 hover:cursor-pointer hover:border-pink-950 sm:w-64 sm:h-64 transition-transform transform hover:scale-105`}
                 />
             </div>
 
