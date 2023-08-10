@@ -4,6 +4,7 @@ import Title from "../D1_Skeleton/D2_TitleHolder"
 import MyPhoto from "../D1_Skeleton/D1_PhotoHolder"
 import ContactBar from "../D1_Skeleton/D3_ContactBar";
 import SkillSection from "../D1_Skeleton/D5_SkillSection";
+import IntroStats from "../D1_Skeleton/D6_IntroStats";
 const Home = () =>{
     return (
         <>
@@ -22,8 +23,8 @@ const Home = () =>{
                     </div>
                 </div>
                 <SkillSection/>
-                <div>
-
+                <div className={`bg-black`}>
+                    <IntroStats/>
                 </div>
                 <div className={`bg-black`}>
                     <div>
