@@ -3,6 +3,7 @@ import Navbar from "../D1_Skeleton/D0_Navbar";
 import Title from "../D1_Skeleton/D2_TitleHolder"
 import MyPhoto from "../D1_Skeleton/D1_PhotoHolder"
 import ContactBar from "../D1_Skeleton/D3_ContactBar";
+import SkillSection from "../D1_Skeleton/D5_SkillSection";
 const Home = () =>{
     return (
         <>
@@ -20,9 +21,10 @@ const Home = () =>{
                         <MyPhoto />
                     </div>
                 </div>
+                <SkillSection/>
+                <div>
 
-
-
+                </div>
                 <div className={`bg-black`}>
                     <div>
                         <ContactBar/>
