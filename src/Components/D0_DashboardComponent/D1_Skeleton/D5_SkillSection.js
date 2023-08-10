@@ -33,11 +33,10 @@ const D5_SkillSection = ()=>{
 
             <p className={`text-center font-bold text-xl text-white mb-4 mt-4 sm:text-4xl`}> UI/Modelling</p>
             <div className={`flex justify-center bg-black`}>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-4 py-2">
                     <SkillHolder image={figma} title="Figma" value={65} />
                     <SkillHolder image={xd} title="XD" value={35} />
                     <SkillHolder image={blender} title="Blender" value={25} />
-
                 </div>
             </div>
 
