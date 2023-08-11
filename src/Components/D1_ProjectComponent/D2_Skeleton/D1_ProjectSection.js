@@ -25,7 +25,7 @@ const D1_ProjectSection = ()=>{
                 <p className={`font-bold text-white mt-1 mb-4 text-2xl text-center sm:mt-2`}>Programs/Projects</p>
             <div>
                 {projects.map((project)=>{
-                    return  <div>
+                    return  <div className={`p-4`}>
                         <div className={`bg-gray-800 rounded-xl p-4 hover:cursor-pointer hover:shadow-2xl hover:shadow-cyan-400 hover:rounded-2xl hover:bg-gray-600 shadow-md shadow-cyan-400`}>
                             <div className={`flex justify-between`}>
                                 <p className={`text-white font-bold text-2xl`}>{project.title}</p>
