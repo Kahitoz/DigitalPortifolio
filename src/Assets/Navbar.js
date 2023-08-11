@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import Button from "../../../Assets/Button";
-import { D0_NavbarCSS } from "./D0_NavbarCSS";
+import Button from "./Button";
+import { D0_NavbarCSS } from "../Components/D0_DashboardComponent/D1_Skeleton/D0_NavbarCSS";
 
 const Navbar = () => {
     let Links = [
         { name: "Home", link: "/" },
-        { name: "Cv", link: "/" },
-        { name: "Projects", link: "/" },
-        { name: "Conatct Me", link: "/" },
+        { name: "Résumé", link: "/" },
+        { name: "Projects", link: "/Projects" },
+        { name: "Contact Me", link: "/" },
     ];
 
     let [open, setOpen] = useState(false);
