@@ -1,8 +1,7 @@
-import D0_Projects from "../D1_Screens/D0_Projects";
 import {db} from "../../../Database/firebase";
 import {useEffect, useState} from "react";
 import {collection, getDocs} from "firebase/firestore"
-import github from "../../D0_DashboardComponent/D2_Images/github.png";
+
 
 const D1_ProjectSection = ()=>{
     const [projects, setProjects] = useState([]) ;
