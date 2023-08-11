@@ -5,13 +5,13 @@ import {getFirestore} from "firebase/firestore"
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDjMUDWcd8pYeYvG9K2nRuhzge3KEF2kCI",
-  authDomain: "personal-portifolio-3a27a.firebaseapp.com",
-  projectId: "personal-portifolio-3a27a",
-  storageBucket: "personal-portifolio-3a27a.appspot.com",
-  messagingSenderId: "820796630568",
-  appId: "1:820796630568:web:0770f32bbd1e94e446f71d",
-  measurementId: "G-8FDBJS65QK"
+  apiKey: "AIzaSyAKTvOqrtFAeaDAswFkfh71HAcdA7hGzDM",
+  authDomain: "dp-web-db.firebaseapp.com",
+  projectId: "dp-web-db",
+  storageBucket: "dp-web-db.appspot.com",
+  messagingSenderId: "17404697515",
+  appId: "1:17404697515:web:aab98490aba5ba1e7650ee",
+  measurementId: "G-ME6RS591XH"
 };
 
 
