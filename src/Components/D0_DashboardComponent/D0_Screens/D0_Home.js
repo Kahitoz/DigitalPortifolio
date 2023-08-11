@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../D1_Skeleton/D0_Navbar";
+import Navbar from "../../../Assets/Navbar";
 import Title from "../D1_Skeleton/D2_TitleHolder"
 import MyPhoto from "../D1_Skeleton/D1_PhotoHolder"
 import ContactBar from "../D1_Skeleton/D3_ContactBar";
