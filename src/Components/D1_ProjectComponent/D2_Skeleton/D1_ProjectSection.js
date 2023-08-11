@@ -10,8 +10,10 @@ const D1_ProjectSection = ()=>{
         const fetchData = async () => {
             try {
                 const data  = await getDocs(collecRef)
-                setProjects(data.docs.map((doc)=>({...doc.data(), id:doc.id})));
-                console.log(data);
+                const sortedProjects = data.docs
+                    .map((doc) => ({ ...doc.data(), id: doc.id }))
+                    .sort((a, b) => a.a_index - b.a_index); // Sort projects based on a_index
+                setProjects(sortedProjects);
             } catch (error) {
                 console.error("Firestore Error = ",error);
             }
