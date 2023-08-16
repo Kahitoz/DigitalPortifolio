@@ -5,7 +5,7 @@ const D0_Projects = () =>{
         <>
             <div className={` h-100vh bg-black`}>
                 <div>
-                    <Navbar/>
+                    <Navbar tab="Projects"/>
                 </div>
                 <div className={`py-20`}>
                     <Projects/>
