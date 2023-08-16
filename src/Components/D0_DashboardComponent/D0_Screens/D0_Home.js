@@ -10,7 +10,7 @@ const Home = () =>{
         <>
             <div className="bg-black h-100vh sm:h-screen flex flex-col">
                 <div className={`z-10`}>
-                    <Navbar />
+                    <Navbar tab="Home"/>
                 </div>
 
                 <div className={`flex p-10 flex-col-reverse sm:flex-row sm:justify-center`}>
