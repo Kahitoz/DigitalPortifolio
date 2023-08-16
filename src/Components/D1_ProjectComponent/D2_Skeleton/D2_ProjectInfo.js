@@ -24,7 +24,7 @@ const D2_ProjectInfo = () => {
   return (
     <div>
       <div className={`z-10`}>
-        <Navbar />
+        <Navbar tab="Projects"/>
       </div>
       <div className={`flex flex-col ms-10`}>
         <div
