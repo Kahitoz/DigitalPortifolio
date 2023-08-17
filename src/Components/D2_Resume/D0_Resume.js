@@ -53,8 +53,8 @@ const D0_Resume = () => {
           <p className="text-white font-bold">Download Detailed Resume</p>
         </div>
       </div>
-      <div className="p-4 mt-8">
-        <p className="text-white font-bold text-xl">
+      <div className="p-4 mt-8 inline-block">
+        <p className="text-white font-bold text-xl text-center">
           Software Engineer/Developer CV - Kshitiz Sinha
         </p>
 
