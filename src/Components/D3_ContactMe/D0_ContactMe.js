@@ -8,6 +8,28 @@ const D0_ContactMe = () =>{
     const [message, setMessage] = useState("");
     const [status, setStatus] = useState("");
     const [color, setColor] = useState("green-400")
+
+    const check = () => {
+        if (name.length === 0) {
+            setStatus("Name is empty");
+            setColor("red-400");
+        } else if (email.length === 0) {
+            setStatus("Email is empty");
+            setColor("red-400");
+        } else if (purpose.length === 0) {
+            setStatus("Purpose is empty");
+            setColor("red-400");
+        } else if (message.length === 0) {
+            setStatus("Message is empty");
+            setColor("red-400");
+        } else {
+            setStatus("");
+            setColor("white");
+            return true;
+        }
+        return false;
+    };
+
     return(
         <>
             <div>
@@ -53,7 +75,8 @@ const D0_ContactMe = () =>{
                                 placeholder={`Let's talk`}/>
                         </div>
                         <div className={`mt-4 flex justify-center`}>
-                            <div className={`bg-blue-500 inline-block px-2 py-1 rounded-md text-white sm:text-xl text-md text-center hover:cursor-pointer hover:bg-blue-700`}>
+                            <div className={`bg-blue-500 inline-block px-2 py-1 rounded-md text-white sm:text-xl text-md text-center hover:cursor-pointer hover:bg-blue-700`}
+                            onClick={check}>
                                 Send
                             </div>
                         </div>
