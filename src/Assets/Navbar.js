@@ -7,10 +7,11 @@ const Navbar = ({ tab }) => {
     { name: "Home", link: "/" },
     { name: "Resume", link: "/Resume" },
     { name: "Projects", link: "/Projects" },
-    { name: "Contact Me", link: "/" },
+    { name: "Contact Me", link: "/ContactMe" },
   ];
 
   let [open, setOpen] = useState(false);
+
 
   return (
     <body className="bg-black">
@@ -34,7 +35,7 @@ const Navbar = ({ tab }) => {
                   <a
                     href={link.link}
                     className={`${D0_NavbarCSS.d7} ${
-                      link.name === tab ? "text-cyan-300" : ""
+                      link.name === tab ? "text-cyan-400": "text-white"
                     }`}
                   >
                     {link.name}
