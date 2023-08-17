@@ -36,15 +36,15 @@ const D0_ContactMe = () =>{
                 <div>
                     <Navbar tab={`Contact Me`}/>
                 </div>
-                <div className={`flex justify-center items-center h-vh sm:h-screen`}>
-                    <div className={`mt-20 inline-block sm:w-6/12 p-3 sm:p-8 bg-gray-900 rounded-md  shadow-xl shadow-cyan-400 hover:shadow-2xl hover:shadow-cyan-400`}>
+                <div className={`flex justify-center items-center h-screen`}>
+                    <div className={`mt-20 inline-block sm:w-6/12 w-10/12 p-3 sm:p-8 bg-gray-900 rounded-md  shadow-xl shadow-cyan-400 hover:shadow-2xl hover:shadow-cyan-400`}>
                         <div className={`mb-4 flex justify-center text-white font-bold text-md sm:text-2xl`}>
                             Message Me
                         </div>
                         <div className={`mt-2`}>
                             <p className={`text-white font-bold px-2`}>Name</p>
                             <input
-                                className={`text-white bg-black px-3 py-1 rounded-full mt-2 sm:w-full`}
+                                className={`text-white bg-black px-3 py-1 rounded-full mt-2 w-full`}
                                 onChange={event => setName(event.target.value)}
                                 value={name}
                                 placeholder={`Enter your name`}/>
@@ -52,7 +52,7 @@ const D0_ContactMe = () =>{
                         <div className={`mt-2`}>
                             <p className={`text-white font-bold px-2`}>Email</p>
                             <input
-                                className={`text-white bg-black px-3 py-1 rounded-full mt-2 sm:w-full`}
+                                className={`text-white bg-black px-3 py-1 rounded-full mt-2 w-full`}
                                 onChange={event => setEmail(event.target.value)}
                                 value={email}
                                 type={`email`}
@@ -61,7 +61,7 @@ const D0_ContactMe = () =>{
                         <div className={`mt-2`}>
                             <p className={`text-white font-bold px-2`}>Purpose</p>
                             <input
-                                className={`text-white bg-black px-3 py-1 rounded-full mt-2 sm:w-full`}
+                                className={`text-white bg-black px-3 py-1 rounded-full mt-2 w-full`}
                                 onChange={event => setPurpose(event.target.value)}
                                 value={purpose}
                                 placeholder={`What's the purpose`}/>
@@ -69,7 +69,7 @@ const D0_ContactMe = () =>{
                         <div className={`mt-2`}>
                             <p className={`text-white font-bold px-2`}>Message</p>
                             <input
-                                className={`text-white bg-black px-3 py-1 rounded-full mt-2 sm:w-full`}
+                                className={`text-white bg-black px-3 py-1 rounded-full mt-2 w-full`}
                                 onChange={event => setMessage(event.target.value)}
                                 value={message}
                                 placeholder={`Let's talk`}/>
