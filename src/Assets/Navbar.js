@@ -12,7 +12,6 @@ const Navbar = ({ tab }) => {
 
   let [open, setOpen] = useState(false);
 
-
   return (
     <body className="bg-black">
       <div>
@@ -35,7 +34,7 @@ const Navbar = ({ tab }) => {
                   <a
                     href={link.link}
                     className={`${D0_NavbarCSS.d7} ${
-                      link.name === tab ? "text-cyan-400": "text-white"
+                      link.name === tab ? "text-cyan-400" : "text-white"
                     }`}
                   >
                     {link.name}
