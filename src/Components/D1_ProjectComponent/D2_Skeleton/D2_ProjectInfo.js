@@ -41,11 +41,13 @@ const D2_ProjectInfo = () => {
           className={`flex items-center justify-center font-bold text-white z-1`}
         >
           <p>View Project on-</p>
-          <img
-            src={github}
-            className={`hover:cursor-pointer w-8 h-8 ms-2`}
-            alt={`github`}
-          ></img>
+          <a href={`${project.github_link}`}>
+            <img
+              src={github}
+              className={`hover:cursor-pointer w-8 h-8 ms-2`}
+              alt={`github`}
+            ></img>
+          </a>
         </div>
         <div>
           <p className={`font-bold text-white text-xl mt-8`}>About Project</p>
