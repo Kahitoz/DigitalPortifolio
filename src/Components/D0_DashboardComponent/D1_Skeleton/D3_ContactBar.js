@@ -14,26 +14,35 @@ const D3_ContactBar = () => {
       <p className={`text-white text-center text-2xl mb-2`}> View my profile</p>
       <div>
         <div className={`flex justify-center rounded-full p-2`}>
-          <img
-            src={github}
-            alt={`github`}
-            className={`hover:cursor-pointer me-3 w-12 h-12 sm:w-auto sm:h-auto`}
-          ></img>
-          <img
-            src={linkedin}
-            alt={`linkedin`}
-            className={`hover:cursor-pointer me-3 w-12 h-12 sm:w-auto sm:h-auto`}
-          ></img>
-          <img
-            src={discord}
-            alt={`discord`}
-            className={`hover:cursor-pointer me-3 w-12 h-12 sm:w-auto sm:h-auto`}
-          ></img>
-          <img
-            src={twitter}
-            alt={`twitter`}
-            className={`hover:cursor-pointer  w-12 h-12 sm:w-auto sm:h-auto`}
-          ></img>
+          <a href={`https://github.com/Kahitoz/`}>
+            <img
+              src={github}
+              alt={`github`}
+              className={`hover:cursor-pointer me-3 w-12 h-12 sm:w-auto sm:h-auto`}
+            ></img>
+          </a>
+          <a href={`https://www.linkedin.com/in/kshitiz-sinha-b639b525a/`}>
+            <img
+              src={linkedin}
+              alt={`linkedin`}
+              className={`hover:cursor-pointer me-3 w-12 h-12 sm:w-auto sm:h-auto`}
+            ></img>
+          </a>
+          <a href={`https://discord.gg/zzabbCEFyX`}>
+            <img
+              src={discord}
+              alt={`discord`}
+              className={`hover:cursor-pointer me-3 w-12 h-12 sm:w-auto sm:h-auto`}
+            ></img>
+          </a>
+
+          <a href={`https://twitter.com/Kahitoz`}>
+            <img
+              src={twitter}
+              alt={`twitter`}
+              className={`hover:cursor-pointer  w-12 h-12 sm:w-auto sm:h-auto`}
+            ></img>
+          </a>
         </div>
       </div>
     </>
