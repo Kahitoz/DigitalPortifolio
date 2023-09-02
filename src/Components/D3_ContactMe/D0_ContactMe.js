@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Navbar from "../../Assets/Navbar";
-import { db } from "../../Database/firebase";
-import { collection, addDoc } from "firebase/firestore";
+import BASE_URL from "../url";
 const D0_ContactMe = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -31,22 +30,40 @@ const D0_ContactMe = () => {
     return false;
   };
 
-  const messageCollectionRef = collection(db, "Message");
   const add_Data = async () => {
-    if (check()) {
-      try {
-        await addDoc(messageCollectionRef, { name, email, purpose, message });
-        setStatus("Message sent successfully");
+    try {
+      // Create a message object with the data
+      const messageData = {
+        name: name,
+        email: email,
+        purpose: purpose,
+        message: message,
+      };
+
+      const response = await fetch(`${BASE_URL}/send_message`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(messageData), 
+      });
+
+      const data = await response.json();
+      if (response.status === 200) {
+        setStatus(data.message);
         setColor("text-green-400");
-        setName("");
-        setEmail("");
-        setPurpose("");
-        setMessage("");
-      } catch (error) {
-        setStatus(`Error: ${error.message}`);
+      } else {
+        setStatus(data.error);
         setColor("text-red-400");
       }
+    } catch (error) {
+      setStatus("An error occurred while sending the message.");
+      setColor("text-red-400");
     }
+    setName("")
+    setEmail("")
+    setPurpose("")
+    setMessage("")
   };
 
   return (
