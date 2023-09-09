@@ -26,3 +26,22 @@ def send_message(name, email, purpose, message ):
         "purpose": purpose
     })
 
+# Reterive the resume link
+def get_resume_link():
+    resume_list = [] 
+    collection_ref = db.collection('Info')
+    documents = collection_ref.stream()
+    for document in documents:
+        data = document.to_dict()
+        if 'short' in data and 'detailed' in data:
+            short_resume = data['short']
+            detailed_resume = data['detailed']
+            resume_list.append((short_resume, detailed_resume))
+
+    return resume_list
+
+
+    
+
+
+
