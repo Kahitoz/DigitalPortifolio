@@ -2,7 +2,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 import firebase_admin
 
-my_firebase_credential = credentials.Certificate('dp_web_db.json')
+my_firebase_credential = credentials.Certificate('E:\Projects\Project-5\DigitalPortifolio\Server\dp_web_db.json')
 firebase_admin.initialize_app(my_firebase_credential)
 
 db = firestore.client()
@@ -36,12 +36,10 @@ def get_resume_link():
         if 'short' in data and 'detailed' in data:
             short_resume = data['short']
             detailed_resume = data['detailed']
-            resume_list.append((short_resume, detailed_resume))
-
+            resume_list.append({"short":short_resume, "detailed":detailed_resume})
     return resume_list
 
-
-    
+  
 
 
 
