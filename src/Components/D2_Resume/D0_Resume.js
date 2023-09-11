@@ -1,39 +1,33 @@
 import Navbar from "../../Assets/Navbar";
-import { db } from "../../Database/firebase";
 import { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import BASE_URL from "../url";
+
 const D0_Resume = () => {
   const [detailedPdfUrl, setDetailedPdfUrl] = useState("");
   const [shortPdfUrl, setShortPdfUrl] = useState("");
 
-  useEffect(() => {
-    const fetchResumeData = async () => {
-      try {
-        const collecRef = collection(db, "Info");
-        const data = await getDocs(collecRef);
-        const resumeInfo = data.docs.find((doc) => doc.id === "Resume")?.data();
-        if (resumeInfo) {
-          setDetailedPdfUrl(resumeInfo.detailed || "");
-          setShortPdfUrl(resumeInfo.short || "");
-        }
-      } catch (error) {
-        console.error("Firestore Error =", error);
-      }
-    };
-    fetchResumeData();
-  }, []);
+  useEffect(()=>{
+    fetch(`${BASE_URL}/get_resume_link`)
+      .then((response) => response.json())
+      .then((data) => {
+          setDetailedPdfUrl(data[0].detailed);
+          setShortPdfUrl(data[0].short);
+      })
+      .catch((error) => {
+        console.error("Error fetching PDF url", error);
+      });
+  }, [])
 
-  const redirectToDetailedPdf = () => {
-    if (detailedPdfUrl) {
-      window.location.href = detailedPdfUrl;
-    }
-  };
+  const redirectToShortPdf = () =>{
+    window.open(shortPdfUrl, "_blank");
+    console.log(shortPdfUrl)
+  }
 
-  const redirectToShortPdf = () => {
-    if (shortPdfUrl) {
-      window.location.href = shortPdfUrl;
-    }
-  };
+  const redirectToDetailedPdf = () =>{
+    window.open(detailedPdfUrl, "_blank");
+    console.log(detailedPdfUrl);
+  }
+
   return (
     <>
       <div>
@@ -104,7 +98,7 @@ const D0_Resume = () => {
           you for reviewing my CV.
         </p>
 
-        <p className="text-white font-bold mt-2 font-bold">
+        <p className="text-white mt-2 font-bold">
           Best regards,
           <br />
           Kshitiz Sinha
