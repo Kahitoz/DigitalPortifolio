@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from Firebase_functions import read_message, send_message;
+from Firebase_functions import read_message, send_message, get_resume_link;
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -12,11 +12,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 # route to retrive the message
 @app.get('/read_message')
 def get_message():
     data = read_message('Message')
     return {"data": data}
+
 
 # route to send the message
 class MessageData(BaseModel):
@@ -25,6 +27,7 @@ class MessageData(BaseModel):
     purpose: str
     message: str
 
+
 @app.post('/send_message')
 def set_message(data: MessageData):
     try:
@@ -32,4 +35,10 @@ def set_message(data: MessageData):
         return {"message": "The message has been sent successfully"}
     except Exception as e:
         return {"error": str(e)}
-    
+
+
+# route to get the resume link
+@app.get('/get_resume_link')
+def get_resume():
+    link = get_resume_link()
+    return link
