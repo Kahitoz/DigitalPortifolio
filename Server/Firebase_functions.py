@@ -2,7 +2,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 import firebase_admin
 
-my_firebase_credential = credentials.Certificate('/Users/kshitizsinha/Desktop/WorkingDirectory/Projects/DigitalPortifolio/Server/dp_web_db.json')
+my_firebase_credential = credentials.Certificate("Server/dp_web_db.json")
 firebase_admin.initialize_app(my_firebase_credential)
 
 db = firestore.client()
@@ -36,8 +36,7 @@ def get_resume_link():
         if 'short' in data and 'detailed' in data:
             short_resume = data['short']
             detailed_resume = data['detailed']
-            resume_list.append({"short":short_resume, "detailed":detailed_resume})
-    print(documents)        
+            resume_list.append({"short":short_resume, "detailed":detailed_resume})      
     return resume_list
 
 
@@ -47,8 +46,7 @@ def get_projects_list():
     collection_ref = db.collection('Projects')
     documents = collection_ref.stream()
     for document in documents:
-        projects_list.append(document)
-    
-    print(documents)
+        document_data = document.to_dict()
+        projects_list.append(document_data)
+    return projects_list
 
-get_resume_link()
