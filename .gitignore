@@ -23,3 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 .env
 Server/dp_web_db.json
+.idea/workspace.xml
+.gitignore
+.idea/workspace.xml
+Server/__pycache__/Firebase_functions.cpython-38.pyc
+Server/__pycache__/main.cpython-38.pyc
