@@ -21,7 +21,7 @@ const D3_ContactBar = () => {
               className={`hover:cursor-pointer me-3 w-12 h-12 sm:w-auto sm:h-auto`}
             ></img>
           </a>
-          <a href={`https://www.linkedin.com/in/kshitiz-sinha-b639b525a/`}>
+          <a href={`https://www.linkedin.com/in/kahitoz/`}>
             <img
               src={linkedin}
               alt={`linkedin`}
