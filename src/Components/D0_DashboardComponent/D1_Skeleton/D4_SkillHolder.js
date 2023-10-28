@@ -10,8 +10,8 @@ const D4_SkillHolder = ({ image, title, value }) => {
           className={`mx-auto w-4 h- sm:w-auto sm:h-auto`}
         />
         <p className={`text-white font-bold text-center text-xs`}>{title}</p>
-        <div className="w-full mt-4 flex justify-evenly">
-          <label className="text-white w-2 ms-2 hover:z-10 mb-10 text-xs">
+        <div className="w-full mt-4 flex justify-evenly flex-col sm:flex-row">
+          <label className="text-white w-2 ms-2 hover:z-10 mb-10 text-xs sm:block hidden">
             Inter.
           </label>
           <input
@@ -21,12 +21,18 @@ const D4_SkillHolder = ({ image, title, value }) => {
             step="1"
             value={value}
             disabled={true}
-            className="w-full"
+            className={`sm:w-full w-4 hidden sm:block`}
           />
-          <label className="text-white  me-3 mb-10 text-xs">Adv.</label>
+          <p className={`text-white text-center text-xs sm:hidden block`}>Rating</p>
+          <p className={`text-white text-xs w-full text-center font-bold sm:hidden visible`}>{value}/100</p>{" "}
+          {/* Show value on smaller screens */}
+          <label className="text-white  me-3 mb-10 text-xs sm:block hidden">
+            Adv.
+          </label>
         </div>
       </div>
     </>
   );
 };
+
 export default D4_SkillHolder;
