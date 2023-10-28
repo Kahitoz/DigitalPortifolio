@@ -1,4 +1,4 @@
-import myPhoto from "../D2_Images/ProfilePhoto.png";
+import myPhoto from "../D2_Images/ProfilePhoto.jpg";
 const D1_PhotoHolder = () => {
   return (
     <>
